@@ -18,7 +18,15 @@ export class TodoService {
     return this._http.post(this.apiUrl, todo);
   }
 
-  deleteTodo(id: number, todo: Todo) {
-    return this._http.delete(this.apiUrl + '/${id}')
+  deleteTodo(id: number) {
+    return this._http.delete(this.apiUrl + `/${id}`)
+  }
+
+  updateTodo(id: number, todo: Todo) {
+    if(!todo.completed) {
+      todo.completed = false
+      console.log(todo)
+    }
+    return this._http.patch(this.apiUrl +`/${id}`, todo);
   }
 }

@@ -20,12 +20,25 @@
     {
       "task": "t1",
       "type": "t1",
+      "completed": false,
       "id": 1
     },
     {
-      "task": "t2",
-      "type": "t2",
+      "task": "s",
+      "type": "s",
+      "completed": false,
       "id": 2
+    },
+    {
+      "task": "s",
+      "type": "s",
+      "completed": true,
+      "id": 3
+    },
+    {
+      "task": "s",
+      "type": "q",
+      "id": 4
     }
   ]
 }
